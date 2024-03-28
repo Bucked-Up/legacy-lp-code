@@ -1,7 +1,9 @@
 # Scripts for handling api calls on upcells with single products
 
 ## How to put into instapage
+
 ### 1. Place this code and change as necessary into html/css footer
+
 ```
 <script>
   const urlParams = new URLSearchParams(window.location.search);
@@ -27,11 +29,11 @@
   if (isLP) urlParams.set("utm_source", "");
 
   // REMOVE IF SHOPIFY
-  if (prodType === "redirect" || prodType === "redirect-finish") 
+  if (prodType === "redirect" || prodType === "redirect-finish")
     urlParams.set("products",`${prodIdArray}`)
 
   //CHANGE FROM HERE UNTILL COMMENT SAYING TO STOP.
-  
+
   const buyButtonIds = ["element-41"];
   const noThanksButtonsIds = [];
   let finishPostRedirect = `https://www.buckedup.com/extension/misc/upsell/complete?${urlParams}`;
@@ -101,5 +103,5 @@
 
   dataLayerStart();
 </script>
-<script src="https://cdn.jsdelivr.net/gh/BuckedUp-DasLabs/single-product@latest/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Bucked-Up/legacy-lp-code@latest/scripts.js"></script>
 ```
